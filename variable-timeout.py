@@ -3,8 +3,13 @@ import time, math
 
 TIMEOUT=5
 
-@route('/hello')
+@route('/')
 def index():
+    time.sleep(int(TIMEOUT))
+    return template('<b>Hello world after {{timeout}}</b>!', timeout=TIMEOUT)
+
+@route('/hello')
+def hello():
     time.sleep(int(TIMEOUT))
     return template('<b>Hello world after {{timeout}}</b>!', timeout=TIMEOUT)
 
