@@ -5,8 +5,7 @@ TIMEOUT=5
 
 @route('/')
 def index():
-    time.sleep(int(TIMEOUT))
-    return template('<b>Hello world after {{timeout}}</b>!', timeout=TIMEOUT)
+    return 'Hello from a Python app!'
 
 @route('/hello')
 def hello():
